@@ -1,6 +1,6 @@
 # Repository specification: aether-ai-infrastructure
 
-**Status:** Documentation baseline copied from the Aether AI master specification. Implementation status must be verified separately.
+**Status:** Repository exists; documentation-only on the inspected `main` branch. No application implementation is present in the audited tree.
 
 ## Mission
 
@@ -8,7 +8,7 @@ Infrastructure-as-code, environment provisioning, networking, managed dependenci
 
 ## Dependencies and connections
 
-Deployment, observability, database, queue, cache.
+Reviewed infrastructure-provider modules and environment foundations; no product-domain runtime dependency.
 
 ## Owned capabilities
 
