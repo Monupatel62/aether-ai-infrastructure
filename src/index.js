@@ -21,7 +21,7 @@ export function validateEnvironmentManifest(manifest) {
     if (service.identity && (!Array.isArray(service.identity.permissions) || service.identity.permissions.length === 0)) errors.push(`${prefix}.identity must declare least-privilege permissions`);
     if (service.environment && typeof service.environment === "object") {
       for (const [key, value] of Object.entries(service.environment)) {
-        if (SECRET_KEY.test(key) && typeof value === "string" && value.length > 0 && !/^\\$?\\{?secret:\\/\\//i.test(value)) errors.push(`${prefix}.environment.${key} must reference a secret manager, not contain a value`);
+        if (SECRET_KEY.test(key) && typeof value === "string" && value.length > 0 && !(value.startsWith("secret://") || value.startsWith("$" + "{secret://"))) errors.push(`${prefix}.environment.${key} must reference a secret manager, not contain a value`);
       }
     }
   }
