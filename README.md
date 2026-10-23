@@ -32,3 +32,11 @@ Documentation baseline established. This repository is not considered implemente
 - [Security review](docs/SECURITY_REVIEW.md)
 - [Engineering standard](docs/ENGINEERING_STANDARD.md)
 - [Work log](docs/WORKLOG.md)
+
+
+## Implemented code baseline
+
+- Provider-neutral environment manifest checks for public ingress, protected/encrypted state, backup policy, identity permissions, and secret-reference hygiene.
+- Plan guard rejects unapproved production changes and destructive-all plans.
+- Node 20/22 test and syntax-check workflow.
+- This is a policy validation starter; it does not provision infrastructure, inspect live cloud state, or replace provider-native policy-as-code and security reviews.
